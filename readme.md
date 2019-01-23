@@ -85,7 +85,7 @@ $schema->valid(
 * callable
 * closure
 * function
-* implements (type:INTERFACE)
+* implements (implements:INTERFACE)
 * int/integer
 * iterable
 * float
