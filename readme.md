@@ -60,6 +60,65 @@ $schema->valid(
 );
 ```
 
+## Types
+
+```php
+'array',
+'bool',
+'boolean',
+'callable',
+'closure',
+'function',
+'implements',
+'int',
+'integer',
+'iterable',
+'float',
+'string',
+'object',
+'resource',
+'type',
+```
+
+* array
+* bool/boolean
+* callable
+* closure
+* function
+* implements (type:INTERFACE)
+* int/integer
+* iterable
+* float
+* string
+* object
+* resources
+* type (type:CLASS)
+
+Types can take arguments, for example for implements and type:
+
+```php
+[
+    'person' => 'type:Person',
+    'implements' => 'implements:Stringable',
+]
+```
+
+## Custom types
+
+```php
+$schema->addType('custom_string', function($value) {
+    return is_string($value);
+});
+```
+
+When using extra arguments for types you just takes in more arguments.
+
+```php
+$schema->addType('type', function ($t, string $expected) {
+    return get_class($t) === $expected;
+});
+```
+
 More examples in the [`tests/SchemaTest.php`](tests/SchemaTest.php)
 
 ## License
