@@ -1,5 +1,5 @@
 {
-    "name": "north/scheam",
+    "name": "north/schema",
     "license": "MIT",
     "description": "A simple schema validation package",
     "require": {
