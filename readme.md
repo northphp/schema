@@ -62,24 +62,6 @@ $schema->valid(
 
 ## Types
 
-```php
-'array',
-'bool',
-'boolean',
-'callable',
-'closure',
-'function',
-'implements',
-'int',
-'integer',
-'iterable',
-'float',
-'string',
-'object',
-'resource',
-'type',
-```
-
 * array
 * bool/boolean
 * callable
